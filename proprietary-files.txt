@@ -42,6 +42,7 @@ lib64/libdpmframework.so
 lib64/libdpmtcm.so
 
 # Display postprocessing
+lib64/libsdm-disp-apis.so
 lib64/vendor.display.color@1.0.so
 
 # FM

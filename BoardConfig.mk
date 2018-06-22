@@ -6,6 +6,7 @@
 
 BOARD_VENDOR := lenovo
 
+BUILD_BROKEN_DUP_RULES := true
 DEVICE_PATH := device/lenovo/zippo
 
 # Architecture

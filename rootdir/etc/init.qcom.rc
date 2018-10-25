@@ -316,9 +316,6 @@ on post-fs-data
     mkdir /dev/socket/wifihal 0770 wifi wifi
     chmod 2770 /dev/socket/wifihal
 
-    #Create directory for hostapd
-    mkdir /data/hostapd 0770 system wifi
-
     # Create /data/time folder for time-services
     mkdir /data/vendor/time/ 0700 system system
 

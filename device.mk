@@ -53,6 +53,10 @@ PRODUCT_PACKAGES += \
     init.qcom.post_boot.sh \
     init.qcom.rc
 
+# Device-specific settings
+PRODUCT_PACKAGES += \
+    LenovoParts
+
 # Display
 PRODUCT_PACKAGES += \
     libdisplayconfig \

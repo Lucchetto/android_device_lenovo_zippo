@@ -96,6 +96,10 @@ PRODUCT_PACKAGES += \
     SecureElement \
     Tag
 
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power@1.2-service
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)

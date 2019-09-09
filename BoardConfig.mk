@@ -48,7 +48,6 @@ TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
 ifeq ($(TARGET_PREBUILT_KERNEL),)
   TARGET_KERNEL_CONFIG := zippo_user_defconfig
   TARGET_KERNEL_CLANG_COMPILE := true
-  TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
   TARGET_KERNEL_SOURCE := kernel/lenovo/sm8150
 endif
 

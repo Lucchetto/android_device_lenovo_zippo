@@ -43,11 +43,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.fod.modified.dc_status=false \
     sys.displayfeature.hbm.enable=true
 
-# Graphics
-PRODUCT_PROPERTY_OVERRIDES += \
-    debug.sf.disable_backpressure=1 \
-    debug.sf.enable_hwc_vds=1
-
 # GPS
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.overlay.izat.optin=rro
@@ -98,4 +93,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Subsystem ramdump
 PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.ssr.enable_ramdumps=0 \
     persist.vendor.ssr.restart_level=ALL_ENABLE

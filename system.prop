@@ -39,7 +39,6 @@ sys.displayfeature.hbm.enable=true
 
 # GPS
 persist.backup.ntpServer=0.pool.ntp.org
-persist.vendor.overlay.izat.optin=rro
 
 # IOP
 vendor.iop.enable_prefetch_ofr=0

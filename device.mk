@@ -97,6 +97,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    libdng_sdk.vendor \
     Snap
 
 # Device init scripts

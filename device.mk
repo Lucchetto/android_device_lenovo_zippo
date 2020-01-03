@@ -104,6 +104,7 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    libdng_sdk.vendor \
     Snap
 
 # Common init scripts

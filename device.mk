@@ -56,7 +56,8 @@ PRODUCT_PACKAGES += \
 # Device init scripts
 PRODUCT_PACKAGES += \
     init.qcom.post_boot.sh \
-    init.qcom.rc
+    init.qcom.rc \
+    ueventd.rc
 
 # Device-specific settings
 PRODUCT_PACKAGES += \

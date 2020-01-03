@@ -261,9 +261,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_profiles_vendor.xml:system/etc/media_profiles_vendor.xml
 
-# Net
+# Network
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.software.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnels.xml
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \

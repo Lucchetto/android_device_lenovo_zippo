@@ -49,7 +49,28 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    audio.a2dp.default
+    android.hardware.audio@2.0-service \
+    android.hardware.audio@5.0-impl \
+    android.hardware.audio.effect@5.0-impl \
+    android.hardware.bluetooth.audio@2.0-impl \
+    android.hardware.soundtrigger@2.1-impl
+
+PRODUCT_PACKAGES += \
+    audio.a2dp.default \
+    audio.bluetooth.default \
+    audio.usb.default \
+    audio.r_submix.default
+
+PRODUCT_PACKAGES += \
+    libvolumelistener \
+    libqcomvisualizer \
+    libqcomvoiceprocessing \
+    libqcomvoiceprocessingdescriptors \
+    libqcompostprocbundle
+
+PRODUCT_PACKAGES += \
+    tinymix \
+    libaudio-resampler
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/audio_policy_configuration.xml \

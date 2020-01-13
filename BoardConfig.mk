@@ -123,6 +123,7 @@ TW_SCREEN_BLANK_ON_BOOT := true
 #TARGET_USES_MKE2FS := true
 TW_EXCLUDE_TWRPAPP := true
 TW_HAS_EDL_MODE := true
+LZMA_RAMDISK_TARGETS := recovery
 
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31

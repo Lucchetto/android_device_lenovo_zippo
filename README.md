@@ -51,7 +51,8 @@ fastboot boot out/target/product/zippo/recovery.img
 
 ## Other Sources
 
-Using precompiled stock kernel
+Kernel source: https://github.com/Lucchetto/android_kernel_lenovo_sm8150
 
 ## Thanks
 
+Thanks to @Lucchetto for the kernel

@@ -35,6 +35,13 @@ Then add these projects to .repo/manifest.xml:
 <project path="device/lenovo/zippo" name="mauronofrio/android_device_lenovo_zippo" remote="github" revision="android-9.0" />
 ```
 
+You need also of this commit in /build:
+
+```
+https://gerrit.omnirom.org/#/c/android_build/+/36483/
+```
+
+
 Finally execute these:
 
 ```

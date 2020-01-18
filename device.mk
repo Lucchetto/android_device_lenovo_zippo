@@ -28,6 +28,10 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
+# Permissions
+PRODUCT_COPY_FILES += \
+    vendor/lineage/config/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
+
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default
@@ -39,6 +43,10 @@ PRODUCT_PACKAGES += \
 # Display
 PRODUCT_PACKAGES += \
     libvulkan
+
+# Fingerprint
+PRODUCT_PACKAGES += \
+    lineage.biometrics.fingerprint.inscreen@1.0-service.lenovo_zippo
 
 # FM
 PRODUCT_PACKAGES += \

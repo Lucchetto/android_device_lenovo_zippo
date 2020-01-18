@@ -9,3 +9,4 @@
 
 # HALs
 /system/bin/hw/lineage\.livedisplay@2\.0-service-sdm                   u:object_r:shal_livedisplay_default_exec:s0
+/system/bin/hw/lineage\.biometrics\.fingerprint\.inscreen@1\.0-service\.lenovo u:object_r:hal_fod_heart_exec:s0

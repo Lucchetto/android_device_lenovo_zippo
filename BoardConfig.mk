@@ -6,7 +6,7 @@
 
 BOARD_VENDOR := lenovo
 
-DEVICE_PATH := device/lenovo/heart
+DEVICE_PATH := device/lenovo/zippo
 
 # Architecture
 TARGET_ARCH := arm64
@@ -24,7 +24,7 @@ TARGET_2ND_CPU_VARIANT := cortex-a75
 TARGET_USES_64_BIT_BINDER := true
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := heart
+TARGET_OTA_ASSERT_DEVICE := zippo
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := msmnile
@@ -43,7 +43,7 @@ BOARD_RAMDISK_OFFSET := 0x01000000
 TARGET_KERNEL_ARCH := arm64
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image-dtb
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-  TARGET_KERNEL_CONFIG := heart_user_defconfig
+  TARGET_KERNEL_CONFIG := zippo_user_defconfig
   TARGET_KERNEL_CLANG_COMPILE := true
   TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
   TARGET_KERNEL_SOURCE := kernel/lenovo/sm8150
@@ -138,4 +138,4 @@ BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flag 2
 
 # Inherit from the proprietary version
--include vendor/lenovo/heart/BoardConfigVendor.mk
+-include vendor/lenovo/zippo/BoardConfigVendor.mk

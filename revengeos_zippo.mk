@@ -6,15 +6,16 @@
 
 $(call inherit-product, device/lenovo/zippo/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common RevengeOS stuff.
+$(call inherit-product, vendor/revengeos/config/common.mk)
+TARGET_BOOT_ANIMATION_RES := 1080
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_BRAND := Lenovo
 PRODUCT_DEVICE := zippo
 PRODUCT_MANUFACTURER := Lenovo
 PRODUCT_MODEL := Lenovo Z6 Pro
-PRODUCT_NAME := lineage_zippo
+PRODUCT_NAME := revengeos_zippo
 
 BUILD_FINGERPRINT := "Lenovo/zippo/zippo:9/PKQ1.190110.001/11.1.021_190802:user/release-keys"
 

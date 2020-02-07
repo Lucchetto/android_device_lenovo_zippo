@@ -13,7 +13,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 PRODUCT_BRAND := Lenovo
 PRODUCT_DEVICE := zippo
 PRODUCT_MANUFACTURER := Lenovo
-PRODUCT_MODEL := Lenovo Z5 Pro GT
+PRODUCT_MODEL := Lenovo Z6 Pro
 PRODUCT_NAME := lineage_zippo
 
 BUILD_FINGERPRINT := "Lenovo/zippo/zippo:9/PKQ1.190110.001/11.1.021_190802:user/release-keys"

@@ -7,7 +7,7 @@
 
 set -e
 
-DEVICE=heart
+DEVICE=zippo
 VENDOR=lenovo
 
 INITIAL_COPYRIGHT_YEAR=2019

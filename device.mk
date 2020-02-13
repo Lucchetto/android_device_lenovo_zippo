@@ -168,22 +168,18 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     init.qcom.performance.rc
 
+
 # Display
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.mapper@2.0-impl-qti-display \
+    vendor.qti.hardware.display.allocator-service
+
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.mapper@2.0-impl-qti-display
+
+PRODUCT_PACKAGES += \
     gralloc.msmnile \
     hwcomposer.msmnile \
-    libdisplayconfig \
-    libdisplayconfig.vendor \
-    libqdMetaData \
-    libqdMetaData.system \
-    libtinyxml \
-    libvulkan \
-    memtrack.msmnile \
-    vendor.display.config@1.10 \
-    vendor.qti.hardware.display.allocator-service \
-    vendor.qti.hardware.display.allocator@1.0-service \
-    vendor.qti.hardware.display.allocator@1.0.vendor
+    memtrack.msmnile
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -456,7 +452,11 @@ PRODUCT_COPY_FILES += \
 
 # WiFi Display
 PRODUCT_PACKAGES += \
-    libnl
+    libdisplayconfig \
+    libdisplayconfig.vendor \
+    libnl \
+    libqdMetaData \
+    libqdMetaData.system
 
 PRODUCT_BOOT_JARS += \
     WfdCommon

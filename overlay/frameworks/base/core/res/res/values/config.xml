@@ -389,7 +389,7 @@
     <bool name="config_fillMainBuiltInDisplayCutout">false</bool>
 
     <!-- Height of the status bar -->
-    <dimen name="status_bar_height_portrait">30dp</dimen>
+    <dimen name="status_bar_height_portrait">25dp</dimen>
 
     <!-- Height of the status bar in landscape -->
     <dimen name="status_bar_height_landscape">24dp</dimen>
@@ -409,7 +409,7 @@
                 <string ...>M -5,0 L -5,10 L 5,10 L 5,0 Z @dp</string>
          @see https://www.w3.org/TR/SVG/paths.html#PathData
          -->
-    <string translatable="false" name="config_mainBuiltInDisplayCutout">M -50,0 L -50,90 L 50,90 L 50,0 Z</string>
+    <string translatable="false" name="config_mainBuiltInDisplayCutout">M -50,0 L -50,75 L 50,75 L 50,0 Z</string>
 
     <!-- Whether device has a physical display cutout -->
     <bool name="config_physicalDisplayCutout">true</bool>

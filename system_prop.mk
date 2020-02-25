@@ -12,6 +12,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.sat.fallback.lux.d=50 \
     persist.vendor.camera.enableNCSService=TRUE \
     persist.vendor.camera.enableTOFInterface=TRUE \
+    sys.camera.packagename.zui=1 \
     vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap
 
 # CNE and DPM

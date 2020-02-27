@@ -16,10 +16,10 @@ PRODUCT_MANUFACTURER := Lenovo
 PRODUCT_MODEL := Lenovo Z6 Pro
 PRODUCT_NAME := lineage_zippo
 
-BUILD_FINGERPRINT := "Lenovo/zippo/zippo:9/PKQ1.190110.001/11.1.021_190802:user/release-keys"
+BUILD_FINGERPRINT := "Lenovo/zippo/zippo:10/QKQ1.190825.002/11.5.229_200114:user/release-keys"
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="zippo-user 9 PKQ1.190110.001 11.1.021_190802 release-keys" \
+    PRIVATE_BUILD_DESC="zippo-user 10 QKQ1.190825.002 11.5.229_200114 release-keys" \
     PRODUCT_NAME="zippo" \
     TARGET_DEVICE="zippo"
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <device name="Android">
-    <item name="battery.capacity">3350</item>
+    <item name="battery.capacity">4000</item>
     <array name="cpu.clusters.cores">
         <value>4</value>
         <value>3</value>
@@ -141,18 +141,18 @@
     <item name="video">21.29</item>
     <item name="audio">74.758</item>
     <item name="wifi.controller.idle">2</item>
-    <item name="wifi.controller.rx">166</item>
-    <item name="wifi.controller.tx">720</item>
+    <item name="wifi.controller.rx">140</item>
+    <item name="wifi.controller.tx">260</item>
     <item name="wifi.controller.voltage">3700</item>
     <item name="modem.controller.sleep">0</item>
-    <item name="modem.controller.idle">145</item>
-    <item name="modem.controller.rx">147</item>
+    <item name="modem.controller.idle">3</item>
+    <item name="modem.controller.rx">150</item>
     <array name="modem.controller.tx">
-        <value>153</value>
-        <value>198</value>
-        <value>259</value>
-        <value>310</value>
-        <value>395</value>
+        <value>150</value>
+        <value>180</value>
+        <value>230</value>
+        <value>300</value>
+        <value>390</value>
     </array>
     <item name="modem.controller.voltage">3700</item>
     <array name="gps.signalqualitybased">

@@ -402,5 +402,13 @@
 
     <!-- Whether device has a physical display cutout -->
     <bool name="config_physicalDisplayCutout">true</bool>
+
+    <!-- Radius of the software rounded corners at the top of the display in its natural
+         orientation. If zero, the value of rounded_corner_radius is used. -->
+    <dimen name="rounded_corner_radius_top">112px</dimen>
+
+    <!-- Radius of the software rounded corners at the bottom of the display in its natural
+         orientation. If zero, the value of rounded_corner_radius is used. -->
+    <dimen name="rounded_corner_radius_bottom">120px</dimen>
 </resources>
 

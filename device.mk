@@ -48,6 +48,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     Snap
 
+# Common init scripts
+PRODUCT_PACKAGES += \
+    init.qcom.post_boot.sh
+
 # Display
 PRODUCT_PACKAGES += \
     libdisplayconfig \

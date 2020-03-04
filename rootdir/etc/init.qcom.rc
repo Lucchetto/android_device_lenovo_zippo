@@ -8,8 +8,5 @@ on init
     write /dev/stune/top-app/schedtune.boost 10
     write /dev/stune/top-app/schedtune.prefer_idle 1
 
-on post-fs
-    mount none /system/bin/hw/android.hardware.power@1.2-service /vendor/bin/hw/android.hardware.power@1.2-service bind
-
 on property:sys.boot_completed=1
     write /dev/stune/schedtune.boost 0

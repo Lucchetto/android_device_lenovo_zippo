@@ -17,7 +17,7 @@ PRODUCT_MANUFACTURER := Lenovo
 PRODUCT_MODEL := Lenovo Z6 Pro
 PRODUCT_NAME := revengeos_zippo
 
-BUILD_FINGERPRINT := "Lenovo/zippo/zippo:10/QKQ1.190825.002/11.5.229_200114:user/release-keys"
+BUILD_FINGERPRINT := "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys"
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="zippo-user 10 QKQ1.190825.002 11.5.229_200114 release-keys" \

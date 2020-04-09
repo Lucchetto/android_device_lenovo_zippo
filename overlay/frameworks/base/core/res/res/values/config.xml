@@ -423,5 +423,8 @@
         rounded_corner_radius_bottom to more accurately provide a "radius" for the bottom rounded
         corners. -->
     <dimen name="rounded_corner_radius_bottom_adjustment">48px</dimen>
+
+    <!-- If true, the display will be shifted around in ambient mode. -->
+    <bool name="config_enableBurnInProtection">true</bool>
 </resources>
 

@@ -16,4 +16,7 @@
 <resources>
     <!-- Color of the FOD view -->
     <color name="config_fodColor">#00ffff</color>
+
+    <!-- Burn in protection -->
+    <bool name="config_statusBarBurnInProtection">true</bool>
 </resources>

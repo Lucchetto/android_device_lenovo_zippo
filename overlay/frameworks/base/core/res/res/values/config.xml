@@ -426,5 +426,8 @@
 
     <!-- If true, the display will be shifted around in ambient mode. -->
     <bool name="config_enableBurnInProtection">true</bool>
+
+    <!-- Default number of max cached processes -->
+    <integer name="config_defaultMaxCachedProcesses">64</integer>
 </resources>
 

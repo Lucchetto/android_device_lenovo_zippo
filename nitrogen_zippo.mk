@@ -7,7 +7,7 @@
 $(call inherit-product, device/lenovo/zippo/device.mk)
 
 # Inherit some common RevengeOS stuff.
-$(call inherit-product, vendor/havoc/config/common_full_phone.mk)
+$(call inherit-product, vendor/nitrogen/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 
 # Device identifier. This must come after all inclusions.
@@ -15,7 +15,7 @@ PRODUCT_BRAND := Lenovo
 PRODUCT_DEVICE := zippo
 PRODUCT_MANUFACTURER := Lenovo
 PRODUCT_MODEL := Lenovo Z6 Pro
-PRODUCT_NAME := havoc_zippo
+PRODUCT_NAME := nitrogen_zippo
 
 BUILD_FINGERPRINT := "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys"
 

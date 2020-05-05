@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/havoc_zippo.mk
+    $(LOCAL_DIR)/nitrogen_zippo.mk

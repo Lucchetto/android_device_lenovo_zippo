@@ -79,6 +79,7 @@ PRODUCT_PACKAGES += \
 
 # Device init scripts
 PRODUCT_PACKAGES += \
+    fstab.qcom \
     init.qcom.post_boot.sh \
     init.qcom.rc \
     ueventd.rc

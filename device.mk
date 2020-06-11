@@ -43,6 +43,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
    frameworks/native/data/etc/android.hardware.telephony.ims.xml:system/etc/permissions/android.hardware.telephony.ims.xml
 
+# AID/fs configs
+PRODUCT_PACKAGES += \
+    fs_config_files
+
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default

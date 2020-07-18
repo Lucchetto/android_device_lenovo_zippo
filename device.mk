@@ -117,6 +117,9 @@ PRODUCT_PACKAGES += \
     init.qti.ims.sh
 
 PRODUCT_PACKAGES += \
+    ueventd.rc
+
+PRODUCT_PACKAGES += \
     init.custom.rc \
     init.lenovo.common.rc \
     init.lenovo.rc \

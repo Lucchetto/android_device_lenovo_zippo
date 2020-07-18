@@ -96,6 +96,9 @@ PRODUCT_PACKAGES += \
 # Device init scripts
 PRODUCT_PACKAGES += \
     fstab.qcom \
+    init.lenovo.common.rc \
+    init.lenovo.rc \
+    init.lenovo.usb.configfs.rc \
     init.msm.usb.configfs.rc \
     init.qcom.factory.rc \
     init.qcom.post_boot.sh \

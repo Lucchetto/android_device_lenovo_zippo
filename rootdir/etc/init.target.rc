@@ -59,9 +59,6 @@ on post-fs
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
 
-    start vendor.spdaemon
-    start vendor.sec_nvm
-
 on late-fs
     wait_for_prop hwservicemanager.ready true
     exec_start wait_for_keymaster
@@ -75,6 +72,7 @@ on post-fs-data
     mkdir /tombstones/dsps 0771 system system
     mkdir /data/vendor/hbtp 0750 system system
     mkdir /data/vendor/nnhal 0700 system system
+    mkdir /data/vendor/dolby 0770 media media
 
 on early-boot
     start vendor.sensors
@@ -161,17 +159,6 @@ on charger
     setprop sys.usb.controller a600000.dwc3
     setprop sys.usb.configfs 1
 
-service vendor.spdaemon /vendor/bin/spdaemon
-    class core
-    user system
-    group system
-    shutdown critical
-
-service vendor.sec_nvm /vendor/bin/sec_nvm
-    class core
-    user system
-    group system
-
 service vendor.thermal-engine /vendor/bin/thermal-engine
    class main
    user root
@@ -179,7 +166,7 @@ service vendor.thermal-engine /vendor/bin/thermal-engine
    socket thermal-recv-client stream 0660 system system
    socket thermal-recv-passive-client stream 0666 system system
    socket thermal-send-rule stream 0660 system system
-   group root
+   group root system
 
 
 service vendor.lowi /vendor/bin/sscrpcd

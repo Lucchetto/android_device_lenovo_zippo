@@ -30,6 +30,9 @@ import /vendor/etc/init/hw/init.msm.usb.configfs.rc
 import /vendor/etc/init/hw/init.qcom.test.rc
 import /vendor/etc/init/hw/init.target.rc
 import /vendor/etc/init/hw/init.qcom.factory.rc
+import /vendor/etc/init/hw/init.lenovo.rc
+import /vendor/etc/init/hw/init.lenovo.usb.configfs.rc
+import /vendor/etc/init/hw/init.lenovo.common.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug
@@ -251,7 +254,7 @@ on post-fs-data
     mkdir /data/vendor/qtee 0770 system system
 
     #Create folder of camera
-    mkdir /data/vendor/camera 0770 camera camera
+    mkdir /data/vendor/camera 0777 camera camera
 
 
     #Create directory for tftp
@@ -338,6 +341,9 @@ on post-fs-data
 
     # Create /data/time folder for time-services
     mkdir /data/vendor/time/ 0700 system system
+
+    # Create /data/vendor/diag_logs folder for on-device-logging
+    mkdir /data/vendor/diag_mdlog 0777 system system
 
     setprop vold.post_fs_data_done 1
 
@@ -786,17 +792,17 @@ service iprenew_bt-pan /system/bin/dhcpcd -n
     disabled
     oneshot
 
-service ssgqmigd /vendor/bin/ssgqmigd
-    class late_start
-    user radio
-    group radio gps system
-    socket ssgqmig seqpacket 0660 radio inet
+# service ssgqmigd /vendor/bin/ssgqmigd
+#     class late_start
+#     user radio
+#     group radio gps system
+#     socket ssgqmig seqpacket 0660 radio inet
 
-service ssgtzd /vendor/bin/ssgtzd
-    class late_start
-    user system
-    group system
-    socket ssgtzd stream 0660 system inet
+# service ssgtzd /vendor/bin/ssgtzd
+#     class late_start
+#     user system
+#     group system
+#     socket ssgtzd stream 0660 system inet
 
 service mlid /vendor/bin/mlid
     class late_start
@@ -1099,6 +1105,10 @@ service vendor.power_off_alarm /vendor/bin/power_off_alarm
     disabled
     oneshot
 
+# shenqi-framework, wangwq14, start vendor.power_off_alarm when shutdown charging.
+on property:debug.shutdown_charging=1
+    start vendor.power_off_alarm
+
 service vendor.move_time_data /system/bin/move_time_data.sh
     class main
     user system
@@ -1106,19 +1116,19 @@ service vendor.move_time_data /system/bin/move_time_data.sh
     disabled
     oneshot
 
-service vendor.hbtp /vendor/bin/hbtp_daemon
-     class main
-     user system
-     group system
-     capabilities SYS_NICE
-     disabled
+#service vendor.hbtp /vendor/bin/hbtp_daemon
+#     class main
+#     user system
+#     group system
+#     capabilities SYS_NICE
+#     disabled
 
-service chre /vendor/bin/chre
-    class late_start
-    user system
-    group system
-    socket chre seqpacket 0660 root system
-    shutdown critical
+#service chre /vendor/bin/chre
+#    class late_start
+#    user system
+#    group system
+#    socket chre seqpacket 0660 root system
+#    shutdown critical
 
 on property:vendor.chre.enabled=0
    stop chre

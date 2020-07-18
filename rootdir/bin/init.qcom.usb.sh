@@ -51,6 +51,7 @@ fi
 # Override USB default composition
 #
 # If USB persist config not set, set default configuration
+build_type=`getprop ro.build.type`
 if [ "$(getprop persist.vendor.usb.config)" == "" -a \
 	"$(getprop init.svc.vendor.usb-gadget-hal-1-0)" != "running" ]; then
     if [ "$esoc_name" != "" ]; then
@@ -106,7 +107,9 @@ if [ "$(getprop persist.vendor.usb.config)" == "" -a \
 		          setprop persist.vendor.usb.config diag,serial_cdev,rmnet,dpl,adb
 		      ;;
 	              "msmnile" | "sm6150" | "trinket" | "lito")
-			  setprop persist.vendor.usb.config diag,serial_cdev,rmnet,dpl,qdss,adb
+		          if [ "$build_type" != "user" ]; then
+			      setprop persist.vendor.usb.config diag,serial_cdev,rmnet,dpl,qdss,adb
+			  fi
 		      ;;
 	              *)
 		          setprop persist.vendor.usb.config diag,adb
@@ -151,12 +154,14 @@ fi
 # check configfs is mounted or not
 if [ -d /config/usb_gadget ]; then
 	# Chip-serial is used for unique MSM identification in Product string
-	msm_serial=`cat /sys/devices/soc0/serial_number`;
-	msm_serial_hex=`printf %08X $msm_serial`
-	machine_type=`cat /sys/devices/soc0/machine`
-	product_string="$machine_type-$soc_hwplatform _SN:$msm_serial_hex"
-	echo "$product_string" > /config/usb_gadget/g1/strings/0x409/product
-
+	product_usb=`cat /config/usb_gadget/g1/strings/0x409/product` 2> /dev/null
+	if [ "$product_usb" == "" ]; then
+		msm_serial=`cat /sys/devices/soc0/serial_number`;
+		msm_serial_hex=`printf %08X $msm_serial`
+		machine_type=`cat /sys/devices/soc0/machine`
+		product_string="$machine_type-$soc_hwplatform _SN:$msm_serial_hex"
+		echo "$product_string" > /config/usb_gadget/g1/strings/0x409/product
+	fi
 	# ADB requires valid iSerialNumber; if ro.serialno is missing, use dummy
 	serialnumber=`cat /config/usb_gadget/g1/strings/0x409/serialnumber 2> /dev/null`
 	if [ "$serialnumber" == "" ]; then

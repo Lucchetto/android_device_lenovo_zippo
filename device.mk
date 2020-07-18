@@ -109,6 +109,7 @@ PRODUCT_PACKAGES += \
     init.qcom.sensors.sh \
     init.qcom.sh \
     init.qcom.usb.sh \
+    init.qti.fm.sh \
     init.qti.ims.sh \
     init.lenovo.common.rc \
     init.lenovo.rc \

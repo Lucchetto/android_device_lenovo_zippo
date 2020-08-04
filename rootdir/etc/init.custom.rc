@@ -1,6 +1,5 @@
 on init
     # Set boottime stune value
-    write /dev/stune/schedtune.prefer_idle 1
     write /dev/stune/schedtune.boost 100
 
     # set default schedTune value for foreground/top-app

@@ -36,8 +36,8 @@ product/lib64/vendor.qti.hardware.data.qmi@1.0.so
 -vendor/lib64/libplatformconfig.so
 
 # Diag
-product/lib64/libdiag_system.so
-product/lib/libdiag_system.so
+lib64/libdiag_system.so
+lib/libdiag_system.so
 
 # DPM
 framework/tcmclient.jar

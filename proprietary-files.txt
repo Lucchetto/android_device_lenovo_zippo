@@ -1073,6 +1073,11 @@ vendor/etc/thermal-engine.conf
 vendor/lib/libthermalclient.so
 vendor/lib64/libthermalclient.so
 
+# Time services
+-vendor/app/TimeService/TimeService.apk;PRESIGNED
+vendor/bin/time_daemon
+vendor/lib64/libtime_genoff.so
+
 # WiFi Display
 bin/wfdservice
 etc/init/wfdservice.rc

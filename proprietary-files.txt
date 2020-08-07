@@ -150,10 +150,6 @@ vendor/lib64/libcvp_stub.so
 vendor/lib64/vendor.qti.hardware.cvp@1.0.so
 vendor/lib64/vendor.qti.hardware.cvp@1.0-halimpl.so
 
-# Diag
-lib64/libdiag_system.so
-lib/libdiag_system.so
-
 # Display
 -product/lib/libsdm-disp-apis.qti.so
 -product/lib64/libsdm-disp-apis.qti.so
@@ -341,7 +337,6 @@ vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 # GPS
 vendor/lib/hw/vendor.qti.gnss@3.0-impl.so
 vendor/lib/vendor.qti.gnss@3.0-service.so
-vendor/lib64/hw/vendor.qti.gnss@3.0-impl.so
 vendor/lib64/vendor.qti.gnss@3.0-service.so
 vendor/etc/vintf/manifest/vendor.qti.gnss@3.0-service.xml
 vendor/etc/vintf/manifest/android.hardware.gnss@2.0-service-qti.xml
@@ -569,11 +564,8 @@ vendor/lib64/libjnihelper.so
 # Media
 lib/libFileMux.so
 lib/libmmosal.so
-lib/libmmparser_lite.so
-lib/libOmxMux.so
 lib64/libFileMux.so
 lib64/libmmosal.so
-lib64/libmmparser_lite.so
 lib64/libOmxMux.so
 product/lib/vendor.qti.hardware.vpp@1.1.so
 product/lib64/vendor.qti.hardware.vpp@1.1.so
@@ -584,17 +576,13 @@ vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
 vendor/etc/init/vppservice.rc
 vendor/etc/system_properties.xml
 # vendor/etc/vpp/tunings.txt
-vendor/lib/libmmosal_proprietary.so
-vendor/lib64/libmmosal_proprietary.so
 vendor/lib/libAlacSwDec.so
 vendor/lib/libApeSwDec.so
 vendor/lib/libdsd2pcm.so
-vendor/lib/libFileMux_proprietary.so
 vendor/lib/libFlacSwDec.so
 vendor/lib/libI420colorconvert.so
 vendor/lib/libmm-color-convertor.so
 vendor/lib/libmmosal_proprietary.so
-vendor/lib/libmmparser_lite_proprietary.so
 vendor/lib/libmmrtpdecoder_proprietary.so
 vendor/lib/libmmrtpencoder_proprietary.so
 vendor/lib/libMpeg4SwEncoder.so
@@ -1132,9 +1120,6 @@ vendor/etc/init/android.hardware.drm@1.1-service.wfdhdcp.rc
 vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc
 vendor/lib/libFileMux_proprietary.so
 vendor/lib/libmmparser_lite_proprietary.so
-vendor/lib/libmmrtpdecoder_proprietary.so
-vendor/lib/libmmrtpencoder_proprietary.so
-vendor/lib/libOmxMux_proprietary.so
 vendor/lib/libwfdaac_vendor.so
 vendor/lib/libwfdcodecv4l2_proprietary.so
 vendor/lib/libwfdcommonutils_proprietary.so

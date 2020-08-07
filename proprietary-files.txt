@@ -448,6 +448,18 @@ vendor/lib64/libsdm-color.so
 vendor/lib64/libsdm-diag.so
 vendor/lib64/libtinyxml2_1.so
 
+# Graphics firmware
+vendor/firmware/a630_gmu.bin
+vendor/firmware/a630_sqe.fw
+vendor/firmware/a640_gmu.bin
+vendor/firmware/a640_zap.b00
+vendor/firmware/a640_zap.b01
+vendor/firmware/a640_zap.b02
+vendor/firmware/a640_zap.elf
+vendor/firmware/a640_zap.mdt
+vendor/firmware/leia_pfp_470.fw
+vendor/firmware/leia_pm4_470.fw
+
 # IMS
 etc/permissions/com.qualcomm.qti.imscmservice.xml
 -product/app/uceShimService/uceShimService.apk

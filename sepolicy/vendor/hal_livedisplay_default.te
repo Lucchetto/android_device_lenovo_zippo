@@ -13,10 +13,6 @@ allow shal_livedisplay_default hal_display_color_hwservice:hwservice_manager fin
 # Talk to the binder device node
 allow shal_livedisplay_default binder_device:chr_file rw_file_perms;
 
-# Allow LiveDisplay to store files under /data/display and access them
-allow shal_livedisplay_default display_data_file:dir rw_dir_perms;
-allow shal_livedisplay_default display_data_file:file create_file_perms;
-
 # Allow LiveDisplay to access pps socket
 type mm-pp-daemon, domain;
 typeattribute mm-pp-daemon socket_between_core_and_vendor_violators;

@@ -553,6 +553,18 @@ vendor/lib64/libkeymasterutils.so
 vendor/lib64/libqtikeymaster4.so
 vendor/lib64/libspcom.so
 
+# Latency
+product/framework/vendor.qti.hardware.data.latency-V1.0-java.jar
+product/framework/vendor.qti.latency-V2.0-java.jar
+product/lib/vendor.qti.hardware.data.latency@1.0.so
+product/lib/vendor.qti.latency@2.0.so
+product/lib64/vendor.qti.hardware.data.latency@1.0.so
+product/lib64/vendor.qti.latency@2.0.so
+vendor/lib/vendor.qti.hardware.data.latency@1.0.so
+vendor/lib/vendor.qti.latency@2.0.so
+vendor/lib64/vendor.qti.hardware.data.latency@1.0.so
+vendor/lib64/vendor.qti.latency@2.0.so
+
 # Perf
 product/lib64/vendor.qti.hardware.iop@2.0.so
 product/lib64/vendor.qti.hardware.perf@2.0.so

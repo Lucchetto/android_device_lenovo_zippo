@@ -1018,6 +1018,46 @@ vendor/lib64/libssc.so
 vendor/lib64/libssc_default_listener.so
 vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
 
+# Snapdragon Computer Vision Engine
+product/lib/vendor.qti.hardware.scve.objecttracker@1.0-adapter-helper.so
+product/lib/vendor.qti.hardware.scve.objecttracker@1.0.so
+product/lib/vendor.qti.hardware.scve.panorama@1.0-adapter-helper.so
+product/lib/vendor.qti.hardware.scve.panorama@1.0.so
+product/lib64/vendor.qti.hardware.scve.objecttracker@1.0-adapter-helper.so
+product/lib64/vendor.qti.hardware.scve.objecttracker@1.0.so
+product/lib64/vendor.qti.hardware.scve.panorama@1.0-adapter-helper.so
+product/lib64/vendor.qti.hardware.scve.panorama@1.0.so
+vendor/bin/hw/vendor.qti.hardware.scve.objecttracker@1.0-service
+vendor/bin/hw/vendor.qti.hardware.scve.panorama@1.0-service
+vendor/etc/init/vendor.qti.hardware.scve.objecttracker@1.0-service.rc
+vendor/etc/init/vendor.qti.hardware.scve.panorama@1.0-service.rc
+vendor/lib/hw/vendor.qti.hardware.scve.objecttracker@1.0-impl.so
+vendor/lib/hw/vendor.qti.hardware.scve.panorama@1.0-impl.so
+vendor/lib/libfastcvdsp_stub.so
+vendor/lib/libfastcvopt.so
+vendor/lib/libscveBlobDescriptor.so
+vendor/lib/libscveCommon.so
+vendor/lib/libscveCommon_stub.so
+vendor/lib/libscveObjectSegmentation.so
+vendor/lib/libscveObjectTracker.so
+vendor/lib/libscvePanorama.so
+vendor/lib/vendor.qti.hardware.scve.objecttracker@1.0-halimpl.so
+vendor/lib/vendor.qti.hardware.scve.objecttracker@1.0.so
+vendor/lib/vendor.qti.hardware.scve.panorama@1.0-halimpl.so
+vendor/lib/vendor.qti.hardware.scve.panorama@1.0.so
+vendor/lib64/hw/vendor.qti.hardware.scve.objecttracker@1.0-impl.so
+vendor/lib64/hw/vendor.qti.hardware.scve.panorama@1.0-impl.so
+vendor/lib64/libfastcvdsp_stub.so
+vendor/lib64/libfastcvopt.so
+vendor/lib64/libscveBlobDescriptor.so
+vendor/lib64/libscveCommon.so
+vendor/lib64/libscveCommon_stub.so
+vendor/lib64/libscveObjectSegmentation.so
+vendor/lib64/libscveObjectTracker.so
+vendor/lib64/libscvePanorama.so
+vendor/lib64/vendor.qti.hardware.scve.objecttracker@1.0.so
+vendor/lib64/vendor.qti.hardware.scve.panorama@1.0.so
+
 # WiFi Display
 bin/wfdservice
 etc/init/wfdservice.rc

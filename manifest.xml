@@ -570,12 +570,12 @@
     <hal format="hidl">
         <name>vendor.qti.hardware.display.mapper</name>
         <transport arch="32+64">passthrough</transport>
-        <version>3.0</version>
+        <version>2.0</version>
         <interface>
             <name>IQtiMapper</name>
             <instance>default</instance>
         </interface>
-        <fqname>@3.0::IQtiMapper/default</fqname>
+        <fqname>@2.0::IQtiMapper/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.factory</name>

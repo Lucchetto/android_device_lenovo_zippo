@@ -154,6 +154,21 @@ vendor/lib64/vendor.qti.hardware.cvp@1.0-halimpl.so
 lib64/libdiag_system.so
 lib/libdiag_system.so
 
+# Display hardware
+vendor/lib64/libdisp-aba.so
+vendor/lib64/libdisplayqos.so
+vendor/lib64/libdpps.so
+vendor/lib64/libhdr_tm.so
+vendor/lib64/libqseed3.so
+vendor/lib64/libsdedrm.so
+vendor/lib64/libsdm-color.so
+vendor/lib64/libsdm-colormgr-algo.so
+vendor/lib64/libsdm-diag.so
+vendor/lib64/libsdm-disp-vndapis.so
+vendor/lib64/libsdmextension.so
+vendor/lib64/libtinyxml.so
+vendor/lib64/libtinyxml2_1.so
+
 # DPM
 framework/tcmclient.jar
 product/bin/dpmd

@@ -50,8 +50,3 @@ on boot
 
 on boot
    mkdir /mnt/vendor/persist/tof 0775 system system
-
-# Factory reset start
-on property:vendor.wipe_data=1
-    factory_data_misc
-# Factory reset end

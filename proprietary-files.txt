@@ -574,7 +574,6 @@ vendor/bin/vppservice
 vendor/etc/configstore/vpp.configstore.xml
 vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
 vendor/etc/init/vppservice.rc
-vendor/etc/system_properties.xml
 # vendor/etc/vpp/tunings.txt
 vendor/lib/libAlacSwDec.so
 vendor/lib/libApeSwDec.so

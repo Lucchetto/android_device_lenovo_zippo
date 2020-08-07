@@ -257,6 +257,18 @@ vendor/lib64/libStDrvInt.so
 vendor/lib64/libtzdrmgenprov.so
 vendor/lib64/libwvhidl.so
 
+# Fingerprint
+vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service
+vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc
+vendor/firmware/goodix_cfg_group.bin
+vendor/firmware/goodix_firmware.bin
+vendor/lib/vendor.qti.hardware.fingerprint@1.0.so
+vendor/lib64/hw/fingerprint.default.so
+vendor/lib64/libgf_hal.so
+vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so
+vendor/lib64/vendor.goodix.extend.service@2.0.so
+vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
+
 # FM
 lib64/fm_helium.so
 lib64/libfm-hci.so

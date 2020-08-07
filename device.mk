@@ -227,17 +227,17 @@ PRODUCT_PACKAGES += \
 # Media
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
-    libmm-omxcore \
+    libcodec2_hidl@1.0.vendor \
+    libcodec2_vndk.vendor \
     libOmxAacEnc \
     libOmxAmrEnc \
     libOmxCore \
     libOmxEvrcEnc \
     libOmxG711Enc \
     libOmxQcelp13Enc \
-    libOmxSwVdec \
-    libOmxSwVencMpeg4 \
     libOmxVdec \
     libOmxVenc \
+    libOmxVidcCommon \
     libstagefrighthw
 
 PRODUCT_COPY_FILES += \

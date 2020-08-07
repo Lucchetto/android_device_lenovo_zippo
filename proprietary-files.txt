@@ -175,8 +175,14 @@ vendor/etc/qdcm_calib_data_td4328_video_mode_dsi_truly_panel.xml
 vendor/etc/qdcm_calib_data_td4330_cmd_mode_dsi_truly_panel.xml
 vendor/etc/qdcm_calib_data_td4330_video_mode_dsi_truly_panel.xml
 
+# Display postprocessing
+product/lib64/libsdm-disp-apis.qti.so
+product/lib64/vendor.display.color@1.0.so
+product/lib64/vendor.display.color@1.1.so
+product/lib64/vendor.display.color@1.2.so
+product/lib64/vendor.display.color@1.3.so
+
 # DPM
-framework/tcmclient.jar
 product/bin/dpmd
 product/etc/dpm/dpm.conf
 product/etc/init/dpmd.rc
@@ -184,24 +190,24 @@ product/etc/permissions/com.qti.dpmframework.xml
 product/etc/permissions/dpmapi.xml
 product/framework/com.qti.dpmframework.jar
 product/framework/dpmapi.jar
-product/lib64/com.qualcomm.qti.dpm.api@1.0.so
-product/lib64/libdpmctmgr.so
-product/lib64/libdpmfdmgr.so
-product/lib64/libdpmframework.so
-product/lib64/libdpmtcm.so
 product/lib/com.qualcomm.qti.dpm.api@1.0.so
 product/lib/libdpmctmgr.so
 product/lib/libdpmfdmgr.so
 product/lib/libdpmframework.so
 product/lib/libdpmtcm.so
+product/lib64/com.qualcomm.qti.dpm.api@1.0.so
+product/lib64/libdpmctmgr.so
+product/lib64/libdpmfdmgr.so
+product/lib64/libdpmframework.so
+product/lib64/libdpmtcm.so
 -product/priv-app/dpmserviceapp/dpmserviceapp.apk
-
-# Display postprocessing
-product/lib64/libsdm-disp-apis.qti.so
-product/lib64/vendor.display.color@1.0.so
-product/lib64/vendor.display.color@1.1.so
-product/lib64/vendor.display.color@1.2.so
-product/lib64/vendor.display.color@1.3.so
+system/framework/tcmclient.jar
+vendor/bin/dpmQmiMgr
+vendor/etc/init/dpmQmiMgr.rc
+vendor/lib/com.qualcomm.qti.dpm.api@1.0.so
+vendor/lib/libdpmqmihal.so
+vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
+vendor/lib64/libdpmqmihal.so
 
 # FM
 lib64/fm_helium.so

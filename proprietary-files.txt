@@ -214,6 +214,20 @@ product/lib64/vendor.display.color@1.0.so
 product/lib64/vendor.display.color@1.1.so
 product/lib64/vendor.display.color@1.2.so
 product/lib64/vendor.display.color@1.3.so
+vendor/bin/hw/vendor.display.color@1.0-service
+vendor/etc/init/vendor.display.color@1.0-service.rc
+vendor/lib/libdisp-aba.so
+vendor/lib/libmm-hdcpmgr.so
+vendor/lib/vendor.display.color@1.0.so
+vendor/lib/vendor.display.color@1.1.so
+vendor/lib/vendor.display.color@1.2.so
+vendor/lib/vendor.display.postproc@1.0.so
+vendor/lib64/libdisp-aba.so
+vendor/lib64/libmm-hdcpmgr.so
+vendor/lib64/vendor.display.color@1.0.so
+vendor/lib64/vendor.display.color@1.1.so
+vendor/lib64/vendor.display.color@1.2.so
+vendor/lib64/vendor.display.postproc@1.0.so
 
 # DPM
 product/bin/dpmd

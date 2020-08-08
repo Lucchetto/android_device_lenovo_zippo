@@ -236,7 +236,6 @@ vendor/lib64/vendor.qti.hardware.cvp@1.0-halimpl.so
 
 # Display
 vendor/lib64/libdisplayqos.so
-vendor/lib64/libdpps.so
 vendor/lib64/libhdr_tm.so
 vendor/lib64/libqseed3.so
 vendor/lib64/libsdedrm.so

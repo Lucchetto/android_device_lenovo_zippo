@@ -105,6 +105,7 @@ vendor/lib/libaudio_log_utils.so
 vendor/lib/libaudioalsa.so
 vendor/lib/libaudioparsers.so
 vendor/lib/libbluetooth_audio_session_qti.so
+vendor/lib/libclimax.so
 vendor/lib/libdapparamstorage.so
 vendor/lib/libdrc.so
 vendor/lib/libqtigef.so
@@ -134,6 +135,7 @@ vendor/lib64/libaudio_log_utils.so
 vendor/lib64/libaudioalsa.so
 vendor/lib64/libaudioparsers.so
 vendor/lib64/libbluetooth_audio_session_qti.so
+vendor/lib64/libclimax.so
 vendor/lib64/libdapparamstorage.so
 vendor/lib64/libdlbdsservice.so
 vendor/lib64/libqtigef.so
@@ -149,6 +151,7 @@ vendor/lib64/vendor.qti.hardware.audiohalext@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 
 # Audio amplifier firmware
+vendor/firmware/mono.cnt
 vendor/firmware/tfa98xx.cnt
 
 # Bluetooth
@@ -467,6 +470,7 @@ vendor/etc/cacert_location.pem
 vendor/etc/xtra_root_cert.pem
 vendor/etc/init/android.hardware.gnss@2.0-service-qti.rc
 vendor/lib/hw/android.hardware.gnss@2.0-impl-qti.so
+vendor/lib/libbatching.so
 vendor/lib/libgarden.so
 vendor/lib/libgeofencing.so
 vendor/lib/libgnss.so
@@ -479,6 +483,7 @@ vendor/lib/liblocation_api.so
 vendor/lib/libslimclient.so
 vendor/lib64/hw/android.hardware.gnss@2.0-impl-qti.so
 vendor/lib64/hw/vendor.qti.gnss@3.0-impl.so
+vendor/lib64/libbatching.so
 vendor/lib64/libdataitems.so
 vendor/lib64/libgarden.so
 vendor/lib64/libgarden_haltests_e2e.so

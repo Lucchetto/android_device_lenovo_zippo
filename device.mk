@@ -155,14 +155,13 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
+    android.hardware.graphics.mapper@2.0-impl-qti-display \
     gralloc.msmnile \
     hwcomposer.msmnile \
     libdisplayconfig \
     libdisplayconfig.vendor \
-    libdisplaydebug \
     libqdMetaData \
     libqdMetaData.system \
-    libqdutils \
     libtinyxml \
     libvulkan \
     memtrack.msmnile \
@@ -170,7 +169,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.allocator-service \
     vendor.qti.hardware.display.allocator@1.0-service \
     vendor.qti.hardware.display.allocator@1.0.vendor \
-    vendor.qti.hardware.display.mapper@1.0.vendor
+    vendor.qti.hardware.display.mapper@2.0.vendor \
+    vendor.qti.hardware.display.mapperextensions@1.1.vendor
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -201,7 +201,6 @@ PRODUCT_COPY_FILES += \
 # Graphics
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.3-service \
-    android.hardware.graphics.mapper@2.0-impl-qti-display \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service
 

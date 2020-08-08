@@ -1203,6 +1203,10 @@ vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
 vendor/lib/vendor.qti.hardware.tui_comm@1.0.so
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 
+# Vibrator
+vendor/bin/hw/vendor.qti.hardware.vibrator@1.2-service
+vendor/etc/init/vendor.qti.hardware.vibrator@1.2-service.rc
+
 # WiFi Display
 product/lib/vendor.qti.hardware.wifidisplaysession@1.0.so
 product/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so

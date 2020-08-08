@@ -1,5 +1,35 @@
 # All unpinned blobs below are extracted from L78051_SECURE_USER_11.5.381_ST_200603
 
+# ACDB data
+vendor/etc/acdbdata/adsp_avs_config.acdb
+vendor/etc/acdbdata/CDP/CDP_Bluetooth_cal.acdb
+vendor/etc/acdbdata/CDP/CDP_Codec_cal.acdb
+vendor/etc/acdbdata/CDP/CDP_General_cal.acdb
+vendor/etc/acdbdata/CDP/CDP_Global_cal.acdb
+vendor/etc/acdbdata/CDP/CDP_Handset_cal.acdb
+vendor/etc/acdbdata/CDP/CDP_Hdmi_cal.acdb
+vendor/etc/acdbdata/CDP/CDP_Headset_cal.acdb
+vendor/etc/acdbdata/CDP/CDP_Speaker_cal.acdb
+vendor/etc/acdbdata/CDP/CDP_workspaceFile.qwsp
+vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb
+vendor/etc/acdbdata/MTP/MTP_Codec_cal.acdb
+vendor/etc/acdbdata/MTP/MTP_General_cal.acdb
+vendor/etc/acdbdata/MTP/MTP_Global_cal.acdb
+vendor/etc/acdbdata/MTP/MTP_Handset_cal.acdb
+vendor/etc/acdbdata/MTP/MTP_Hdmi_cal.acdb
+vendor/etc/acdbdata/MTP/MTP_Headset_cal.acdb
+vendor/etc/acdbdata/MTP/MTP_Speaker_cal.acdb
+vendor/etc/acdbdata/MTP/MTP_workspaceFile.qwsp
+vendor/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_Codec_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_General_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_Global_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_Handset_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_Headset_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_workspaceFile.qwsp
+
 # ADSP
 vendor/bin/adsprpcd
 vendor/etc/init/vendor.qti.adsprpc-service.rc

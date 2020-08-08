@@ -1134,6 +1134,12 @@ vendor/etc/sensors/config/sns_tilt_to_wake.json
 vendor/etc/sensors/config/sns_wrist_pedo.json
 vendor/etc/sensors/sns_reg_config
 
+# Sensors HAL
+vendor/bin/hw/android.hardware.sensors@2.0-service
+vendor/etc/init/android.hardware.sensors@2.0-service.rc
+vendor/lib/android.hardware.sensors@2.0-impl.so
+vendor/lib64/android.hardware.sensors@2.0-impl.so
+
 # Snapdragon Computer Vision Engine
 product/lib/vendor.qti.hardware.scve.objecttracker@1.0-adapter-helper.so
 product/lib/vendor.qti.hardware.scve.objecttracker@1.0.so

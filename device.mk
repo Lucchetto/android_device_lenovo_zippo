@@ -127,8 +127,14 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    libdng_sdk.vendor \
-    Snap
+    android.frameworks.displayservice@1.0 \
+    android.hardware.camera.provider@2.4-impl \
+    android.hardware.camera.provider@2.4-service_64 \
+    libdng_sdk \
+    libgui_vendor \
+    libxml2 \
+    Snap \
+    vendor.qti.hardware.camera.device@1.0.vendor
 
 # Device init scripts
 PRODUCT_PACKAGES += \

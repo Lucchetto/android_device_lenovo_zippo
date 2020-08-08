@@ -158,11 +158,12 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 
 # Releasetools
-ENABLE_VENDOR_RIL_SERVICE := true
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
 # RIL
+ENABLE_VENDOR_RIL_SERVICE := true
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
+TARGET_USES_PRE_UPLINK_FEATURES_NETMGRD := true
 
 # Sepolicy
 include device/qcom/sepolicy/sepolicy.mk

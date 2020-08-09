@@ -1,5 +1,5 @@
-<!--
-     Copyright (C) 2019 The LineageOS Project
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2011 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -13,13 +13,14 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+
 <resources>
-    <!-- Doze: does this device support STATE_DOZE and STATE_DOZE_SUSPEND?  -->
-    <bool name="doze_display_state_supported">true</bool>
+    <!-- Whether to enable ETWS settings (Japan) -->
+    <bool name="show_etws_settings">true</bool>
 
-    <!-- Color of the FOD view -->
-    <color name="config_fodColor">#00ffff</color>
+    <!-- Whether to enable CMAS settings (United States) -->
+    <bool name="show_cmas_settings">true</bool>
 
-    <!-- Burn in protection -->
-    <bool name="config_statusBarBurnInProtection">true</bool>
+    <!-- Whether to enable channel 50 settings (Brazil) -->
+    <bool name="show_brazil_settings">true</bool>
 </resources>

@@ -46,7 +46,6 @@ vendor.iop.enable_prefetch_ofr=0
 vendor.iop.enable_uxe=0
 
 # Media
-media.settings.xml=/system/etc/media_profiles_vendor.xml
 vendor.mm.enable.qcom_parser=63963135
 
 # Memory optimizations

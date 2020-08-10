@@ -62,31 +62,6 @@ function configure_zram_parameters() {
     fi
 }
 
-function configure_read_ahead_kb_values() {
-    MemTotalStr=`cat /proc/meminfo | grep MemTotal`
-    MemTotal=${MemTotalStr:16:8}
-
-    # Set 128 for <= 3GB &
-    # set 512 for >= 4GB targets.
-    if [ $MemTotal -le 3145728 ]; then
-        echo 128 > /sys/block/mmcblk0/bdi/read_ahead_kb
-        echo 128 > /sys/block/mmcblk0/queue/read_ahead_kb
-        echo 128 > /sys/block/mmcblk0rpmb/bdi/read_ahead_kb
-        echo 128 > /sys/block/mmcblk0rpmb/queue/read_ahead_kb
-        echo 128 > /sys/block/dm-0/queue/read_ahead_kb
-        echo 128 > /sys/block/dm-1/queue/read_ahead_kb
-        echo 128 > /sys/block/dm-2/queue/read_ahead_kb
-    else
-        echo 512 > /sys/block/mmcblk0/bdi/read_ahead_kb
-        echo 512 > /sys/block/mmcblk0/queue/read_ahead_kb
-        echo 512 > /sys/block/mmcblk0rpmb/bdi/read_ahead_kb
-        echo 512 > /sys/block/mmcblk0rpmb/queue/read_ahead_kb
-        echo 512 > /sys/block/dm-0/queue/read_ahead_kb
-        echo 512 > /sys/block/dm-1/queue/read_ahead_kb
-        echo 512 > /sys/block/dm-2/queue/read_ahead_kb
-    fi
-}
-
 function enable_swap() {
     MemTotalStr=`cat /proc/meminfo | grep MemTotal`
     MemTotal=${MemTotalStr:16:8}
@@ -135,7 +110,6 @@ low_ram=`getprop ro.config.low_ram`
 if [ "$ProductName" == "msmnile" ] || [ "$ProductName" == "kona" ] ; then
       # Enable ZRAM
       configure_zram_parameters
-      configure_read_ahead_kb_values
       echo 0 > /proc/sys/vm/page-cluster
       echo 100 > /proc/sys/vm/swappiness
 else
@@ -235,65 +209,12 @@ else
 
     configure_zram_parameters
 
-    configure_read_ahead_kb_values
-
     enable_swap
 fi
 }
 
-function enable_memory_features()
-{
-    MemTotalStr=`cat /proc/meminfo | grep MemTotal`
-    MemTotal=${MemTotalStr:16:8}
-
-    if [ $MemTotal -le 2097152 ]; then
-        #Enable B service adj transition for 2GB or less memory
-        setprop ro.vendor.qti.sys.fw.bservice_enable true
-        setprop ro.vendor.qti.sys.fw.bservice_limit 5
-        setprop ro.vendor.qti.sys.fw.bservice_age 5000
-
-        #Enable Delay Service Restart
-        setprop ro.vendor.qti.am.reschedule_service true
-    fi
-}
-
-function start_hbtp()
-{
-        # Start the Host based Touch processing but not in the power off mode.
-        bootmode=`getprop ro.bootmode`
-        if [ "charger" != $bootmode ]; then
-                start vendor.hbtp
-        fi
-}
-
 case "$target" in
     "msmnile")
-	# Core control parameters for gold
-	echo 2 > /sys/devices/system/cpu/cpu4/core_ctl/min_cpus
-	echo 60 > /sys/devices/system/cpu/cpu4/core_ctl/busy_up_thres
-	echo 30 > /sys/devices/system/cpu/cpu4/core_ctl/busy_down_thres
-	echo 100 > /sys/devices/system/cpu/cpu4/core_ctl/offline_delay_ms
-	echo 3 > /sys/devices/system/cpu/cpu4/core_ctl/task_thres
-
-	# Core control parameters for gold+
-	echo 0 > /sys/devices/system/cpu/cpu7/core_ctl/min_cpus
-	echo 60 > /sys/devices/system/cpu/cpu7/core_ctl/busy_up_thres
-	echo 30 > /sys/devices/system/cpu/cpu7/core_ctl/busy_down_thres
-	echo 100 > /sys/devices/system/cpu/cpu7/core_ctl/offline_delay_ms
-	echo 1 > /sys/devices/system/cpu/cpu7/core_ctl/task_thres
-	# Controls how many more tasks should be eligible to run on gold CPUs
-	# w.r.t number of gold CPUs available to trigger assist (max number of
-	# tasks eligible to run on previous cluster minus number of CPUs in
-	# the previous cluster).
-	#
-	# Setting to 1 by default which means there should be at least
-	# 4 tasks eligible to run on gold cluster (tasks running on gold cores
-	# plus misfit tasks on silver cores) to trigger assitance from gold+.
-	echo 1 > /sys/devices/system/cpu/cpu7/core_ctl/nr_prev_assist_thresh
-
-	# Disable Core control on silver
-	echo 0 > /sys/devices/system/cpu/cpu0/core_ctl/enable
-
 	# Setting b.L scheduler parameters
 	echo 95 95 > /proc/sys/kernel/sched_upmigrate
 	echo 85 85 > /proc/sys/kernel/sched_downmigrate
@@ -304,18 +225,6 @@ case "$target" in
 	# cpuset parameters
 	echo 0-3 > /dev/cpuset/background/cpus
 	echo 0-3 > /dev/cpuset/system-background/cpus
-
-	# Turn off scheduler boost at the end
-	echo 0 > /proc/sys/kernel/sched_boost
-
-	# configure governor settings for silver cluster
-	echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
-
-	# configure governor settings for gold cluster
-	echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
-
-	# configure governor settings for gold+ cluster
-	echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy7/scaling_governor
 
 	# Disable wsf, beacause we are using efk.
 	# wsf Range : 1..1000 So set to bare minimum value 1.
@@ -417,33 +326,10 @@ case "$target" in
 	    done
 	done
 
-    if [ -f /sys/devices/soc0/hw_platform ]; then
-        hw_platform=`cat /sys/devices/soc0/hw_platform`
-    else
-        hw_platform=`cat /sys/devices/system/soc/soc0/hw_platform`
-    fi
-
     if [ -f /sys/devices/soc0/platform_subtype_id ]; then
         platform_subtype_id=`cat /sys/devices/soc0/platform_subtype_id`
     fi
 
-    case "$hw_platform" in
-        "MTP" | "Surf" | "RCM" )
-            # Start Host based Touch processing
-            case "$platform_subtype_id" in
-                "0" | "1" | "2" | "4")
-                    start_hbtp
-                    ;;
-            esac
-        ;;
-        "HDK" )
-            if [ -d /sys/kernel/hbtpsensor ] ; then
-                start_hbtp
-            fi
-        ;;
-    esac
-
-    echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled
     configure_memory_parameters
     ;;
 esac

@@ -165,6 +165,7 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.recovery.qcom.rc \
     init.target.rc \
+    init.qcom.performance.rc \
     ueventd.rc
 
 # Device-specific settings

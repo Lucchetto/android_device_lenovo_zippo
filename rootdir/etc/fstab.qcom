@@ -52,4 +52,4 @@
 /dev/block/bootdevice/by-name/misc                      /misc                  emmc    defaults                                             defaults
 /dev/block/bootdevice/by-name/boot                      /boot                  emmc    defaults                                             defaults
 /dev/block/bootdevice/by-name/recovery                  /recovery              emmc    defaults                                             defaults
-/dev/block/zram0                                        none                   swap    defaults                                             zramsize=1073741824
+/dev/block/zram0                                        none                   swap    defaults                                             zramsize=2147483648,max_comp_streams=8

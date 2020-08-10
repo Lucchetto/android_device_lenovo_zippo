@@ -154,7 +154,6 @@ PRODUCT_PACKAGES += \
     ueventd.rc
 
 PRODUCT_PACKAGES += \
-    init.custom.rc \
     init.lenovo.common.rc \
     init.lenovo.rc \
     init.lenovo.usb.configfs.rc \

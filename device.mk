@@ -131,7 +131,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0 \
     android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.4-service_64 \
+    android.hardware.camera.provider@2.4-service-lazy_64 \
     libdng_sdk \
     libgui_vendor \
     libxml2 \
@@ -199,7 +199,7 @@ PRODUCT_PACKAGES += \
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
-    android.hardware.drm@1.0-service \
+    android.hardware.drm@1.0-service-lazy \
     android.hardware.drm@1.2-service.clearkey
 
 # Fingerprint
@@ -369,7 +369,7 @@ PRODUCT_PACKAGES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service \
+    android.hardware.wifi@1.0-service-lazy \
     hostapd \
     libwifi-hal-ctrl \
     libwifi-hal-qcom \

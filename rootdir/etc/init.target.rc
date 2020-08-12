@@ -65,7 +65,6 @@ on post-fs-data
     mkdir /tombstones/dsps 0771 system system
     mkdir /data/vendor/hbtp 0750 system system
     mkdir /data/vendor/nnhal 0700 system system
-    mkdir /data/vendor/dolby 0770 media media
 
 on early-boot
     start vendor.sensors

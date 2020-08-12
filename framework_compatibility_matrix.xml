@@ -158,14 +158,6 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>vendor.dolby.hardware.dms</name>
-        <version>2.0</version>
-        <interface>
-            <name>IDms</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
         <name>vendor.goodix.extend.service</name>
         <version>2.0</version>
         <interface>

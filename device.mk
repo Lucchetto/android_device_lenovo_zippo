@@ -122,6 +122,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-service-lazy_64 \
     libdng_sdk \
     libgui_vendor \
+    libqti-perfd-client \
     libxml2 \
     Snap \
     vendor.qti.hardware.camera.device@1.0.vendor

@@ -970,9 +970,6 @@ vendor/bin/hw/android.hardware.neuralnetworks@1.2-service-qti
 vendor/etc/init/android.hardware.neuralnetworks@1.2-service-qti.rc
 vendor/lib64/libhexagon_nn_stub.so
 
-# OMX
-lib/libstagefright_softomx.so
-
 # Perf
 vendor/bin/msm_irqbalance
 

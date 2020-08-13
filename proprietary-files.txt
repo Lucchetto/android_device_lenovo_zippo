@@ -224,7 +224,6 @@ vendor/lib/camera/fdconfigvideo.bin
 vendor/lib/camera/fdconfigvideolite.bin
 vendor/lib/hw/camera.qcom.so
 vendor/lib/hw/com.qti.chi.override.so
-vendor/lib/libbase64.so
 vendor/lib/libcamera_nn_stub.so
 vendor/lib/libcamxfdalgov7.so
 vendor/lib/libcamxfdalgov8.so
@@ -232,8 +231,6 @@ vendor/lib/libcamxfdengine.so
 vendor/lib/libcamxstatscore.so
 vendor/lib/libcamxswprocessalgo.so
 vendor/lib/libcamxtintlessalgo.so
-vendor/lib/libcapiv2svacnn.so
-vendor/lib/libcapiv2vop.so
 vendor/lib/libcom.qti.chinodeutils.so
 vendor/lib/libdualcam_optical_zoom_control.so
 vendor/lib/libdualcam_video_optical_zoom.so
@@ -314,7 +311,6 @@ vendor/lib64/camera/fdconfigvideo.bin
 vendor/lib64/camera/fdconfigvideolite.bin
 vendor/lib64/hw/camera.qcom.so
 vendor/lib64/hw/com.qti.chi.override.so
-vendor/lib64/libbase64.so
 vendor/lib64/libc++_shared.so
 vendor/lib64/libcamera_nn_stub.so
 vendor/lib64/libcamxfdalgov7.so
@@ -323,8 +319,6 @@ vendor/lib64/libcamxfdengine.so
 vendor/lib64/libcamxstatscore.so
 vendor/lib64/libcamxswprocessalgo.so
 vendor/lib64/libcamxtintlessalgo.so
-vendor/lib64/libcapiv2svacnn.so
-vendor/lib64/libcapiv2vop.so
 vendor/lib64/libcom.qti.chinodeutils.so
 vendor/lib64/libdualcam_optical_zoom_control.so
 vendor/lib64/libdualcam_video_optical_zoom.so
@@ -366,6 +360,22 @@ vendor/lib64/libarcsoft_dualcam_refocus.so
 vendor/etc/camera/camxoverridesettings.txt
 vendor/etc/camera/camxoverridesettings_for_cts.txt
 vendor/etc/camera/vidhance_calibration
+
+# Camera Device
+vendor/lib/camera.device@1.0-impl.so
+vendor/lib/camera.device@3.2-impl.so
+vendor/lib/camera.device@3.3-impl.so
+vendor/lib/camera.device@3.4-external-impl.so
+vendor/lib/camera.device@3.4-impl.so
+vendor/lib/camera.device@3.5-external-impl.so
+vendor/lib/camera.device@3.5-impl.so
+vendor/lib64/camera.device@1.0-impl.so
+vendor/lib64/camera.device@3.2-impl.so
+vendor/lib64/camera.device@3.3-impl.so
+vendor/lib64/camera.device@3.4-external-impl.so
+vendor/lib64/camera.device@3.4-impl.so
+vendor/lib64/camera.device@3.5-external-impl.so
+vendor/lib64/camera.device@3.5-impl.so
 
 # Camera Firmware
 vendor/firmware/CAMERA_ICP.elf

@@ -985,9 +985,6 @@ vendor/lib64/unnhal-acc-common.so
 vendor/lib64/unnhal-acc-hta.so
 vendor/lib64/unnhal-acc-hvx.so
 
-# OMX
-lib/libstagefright_softomx.so
-
 # Perf
 -vendor/app/pasrservice/pasrservice.apk
 vendor/bin/hw/vendor.qti.hardware.perf@2.0-service

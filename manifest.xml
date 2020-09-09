@@ -860,6 +860,6 @@
         <fqname>@1.0::IIFAADevice/default</fqname>
     </hal>
     <sepolicy>
-        <version>29.0</version>
+        <version>30.0</version>
     </sepolicy>
 </manifest>

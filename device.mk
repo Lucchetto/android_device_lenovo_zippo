@@ -134,6 +134,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml
 
 # Common init scripts
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/ueventd.rc
 PRODUCT_PACKAGES += \
     init.class_main.sh \
     init.crda.sh \
@@ -150,9 +152,6 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.sh \
     init.qti.fm.sh \
     init.qti.ims.sh
-
-PRODUCT_PACKAGES += \
-    ueventd.rc
 
 PRODUCT_PACKAGES += \
     init.lenovo.common.rc \

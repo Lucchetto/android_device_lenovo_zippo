@@ -171,7 +171,13 @@ TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/touch/tp_dev/gesture_on"
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
-BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flag 2
+ifeq ($(BOARD_AVB_ENABLE), true)
+   BOARD_AVB_RECOVERY_KEY_PATH := external/avb/test/data/testkey_rsa4096.pem
+   BOARD_AVB_RECOVERY_ALGORITHM := SHA256_RSA4096
+   BOARD_AVB_RECOVERY_ROLLBACK_INDEX := 1
+   BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
+   BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flag 2
+endif
 
 # WiFi
 BOARD_WLAN_DEVICE := qcwcn

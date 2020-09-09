@@ -7,6 +7,8 @@
 BOARD_VENDOR := lenovo
 
 BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
+BUILD_BROKEN_VINTF_PRODUCT_COPY_FILES := true
 DEVICE_PATH := device/lenovo/zippo
 
 # Architecture

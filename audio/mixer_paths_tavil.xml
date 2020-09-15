@@ -472,7 +472,7 @@
     <ctl name="RX INT2 DEM MUX" value="CLSH_DSM_OUT" />
 
     <!-- Headphone Default mode - uLP -->
-    <ctl name="RX HPH Mode" value="CLS_H_ULP" />
+    <ctl name="RX HPH Mode" value="CLS_H_HIFI" />
     <ctl name="ASRC0 Output Mode" value="INT" />
     <ctl name="ASRC1 Output Mode" value="INT" />
 

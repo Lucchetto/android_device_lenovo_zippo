@@ -591,12 +591,10 @@ product/framework/dpmapi.jar
 product/lib/com.qualcomm.qti.dpm.api@1.0.so
 product/lib/libdpmctmgr.so
 product/lib/libdpmfdmgr.so
-product/lib/libdpmframework.so
 product/lib/libdpmtcm.so
 product/lib64/com.qualcomm.qti.dpm.api@1.0.so
 product/lib64/libdpmctmgr.so
 product/lib64/libdpmfdmgr.so
-product/lib64/libdpmframework.so
 product/lib64/libdpmtcm.so
 -product/priv-app/dpmserviceapp/dpmserviceapp.apk
 system/framework/tcmclient.jar
@@ -606,6 +604,10 @@ vendor/lib/com.qualcomm.qti.dpm.api@1.0.so
 vendor/lib/libdpmqmihal.so
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
 vendor/lib64/libdpmqmihal.so
+
+# DPM - from oneplus8 - qssi-user-11-RP1A.201005.001-2009051300-release-keys
+system_ext/lib/libdpmframework.so|168e2ec57d888575512f3d0f9b78eaf08b607158
+system_ext/lib64/libdpmframework.so|67ebd736333ae7158632735e3db06a4f9664f6a6
 
 # DRM
 vendor/bin/hw/android.hardware.drm@1.2-service.widevine

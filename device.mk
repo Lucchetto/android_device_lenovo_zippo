@@ -338,6 +338,10 @@ PRODUCT_PACKAGES += \
     librmnetctl \
     libxml2
 
+PRODUCT_PACKAGES += \
+    libprotobuf-cpp-lite-vendorcompat \
+    libprotobuf-cpp-full-vendorcompat \
+
 # Seccomp policy
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/seccomp_policy/codec2.vendor.base.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.base.policy \

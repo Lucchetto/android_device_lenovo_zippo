@@ -22,8 +22,6 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
-import android.os.PowerManager;
-import android.os.PowerManager.WakeLock;
 import android.os.SystemClock;
 import android.util.Log;
 
@@ -31,29 +29,24 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-public class PickupSensor implements SensorEventListener {
+public class MovementSensor implements SensorEventListener {
 
     private static final boolean DEBUG = false;
-    private static final String TAG = "PickupSensor";
+    private static final String TAG = "MovementSensor";
 
-    private static final int MIN_PULSE_INTERVAL_MS = 750;
-    private static final int WAKELOCK_TIMEOUT_MS = 300;
+    private static final int MIN_PULSE_INTERVAL_MS = 2000;
 
     private SensorManager mSensorManager;
     private Sensor mSensor;
     private Context mContext;
     private ExecutorService mExecutorService;
-    private PowerManager mPowerManager;
-    private WakeLock mWakeLock;
 
     private long mEntryTimestamp;
 
-    public PickupSensor(Context context) {
+    public MovementSensor(Context context) {
         mContext = context;
         mSensorManager = mContext.getSystemService(SensorManager.class);
-        mSensor = DozeUtils.getSensor(mSensorManager, "com.lenovo.sensor.pickup");
-        mPowerManager = (PowerManager) mContext.getSystemService(Context.POWER_SERVICE);
-        mWakeLock = mPowerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, TAG);
+        mSensor = DozeUtils.getSensor(mSensorManager, "com.lenovo.sensor.movement");
         mExecutorService = Executors.newSingleThreadExecutor();
     }
 
@@ -63,27 +56,18 @@ public class PickupSensor implements SensorEventListener {
 
     @Override
     public void onSensorChanged(SensorEvent event) {
-        boolean isSmartWake = DozeUtils.isSmartWakeEnabled(mContext);
-
         if (DEBUG) Log.d(TAG, "Got sensor event: " + event.values[0]);
 
-        if (!isSmartWake) {
-            long delta = SystemClock.elapsedRealtime() - mEntryTimestamp;
-            if (delta < MIN_PULSE_INTERVAL_MS) {
-                return;
-            }
+        long delta = SystemClock.elapsedRealtime() - mEntryTimestamp;
+
+        if (delta < MIN_PULSE_INTERVAL_MS) {
+            return;
         }
 
         mEntryTimestamp = SystemClock.elapsedRealtime();
 
-        if (event.values[0] == 1) {
-            if (isSmartWake) {
-                mWakeLock.acquire(WAKELOCK_TIMEOUT_MS);
-                mPowerManager.wakeUp(SystemClock.uptimeMillis(),
-                PowerManager.WAKE_REASON_GESTURE, TAG);
-            } else {
-                DozeUtils.launchDozePulse(mContext);
-            }
+        if (event.values[0] == 2) {
+            DozeUtils.launchDozePulse(mContext);
         }
     }
 
@@ -95,9 +79,9 @@ public class PickupSensor implements SensorEventListener {
     protected void enable() {
         if (DEBUG) Log.d(TAG, "Enabling");
         submit(() -> {
+            mEntryTimestamp = SystemClock.elapsedRealtime();
             mSensorManager.registerListener(this, mSensor,
                     SensorManager.SENSOR_DELAY_NORMAL);
-            mEntryTimestamp = SystemClock.elapsedRealtime();
         });
     }
 

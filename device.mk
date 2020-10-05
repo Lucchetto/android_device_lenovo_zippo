@@ -68,6 +68,7 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default
 
 PRODUCT_PACKAGES += \
+    libtinycompress \
     libvolumelistener \
     libqcomvisualizer \
     libqcomvoiceprocessing \
@@ -109,7 +110,6 @@ PRODUCT_PACKAGES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    liba2dpoffload \
     libbthost_if \
     libldacBT_dec \
     vendor.qti.hardware.bluetooth_audio@2.0.vendor

@@ -40,6 +40,9 @@ sys.displayfeature.hbm.enable=true
 # GPS
 persist.backup.ntpServer=0.pool.ntp.org
 
+# Graphics
+ro.surface_flinger.supports_background_blur=1
+
 # IOP
 vendor.iop.enable_prefetch_ofr=0
 vendor.iop.enable_uxe=0

@@ -381,7 +381,7 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.vibrator@1.2-service
+    vendor.qti.hardware.vibrator.service
 
 # WiFi
 PRODUCT_PACKAGES += \

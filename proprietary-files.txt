@@ -617,6 +617,7 @@ vendor/lib64/libtzdrmgenprov.so
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine|75103a18355966370895526dc9afb6adff4b755b
 vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc|c35e1a6f9a6faff19064a81e07c4be82ceaf4bb5
 vendor/lib64/libwvhidl.so|68d257f6c4b409f71f80c231789d9951f71308a8
+-vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml|10c98b90c385f395834289c6757cfd9b7ffcd24f
 
 # Fingerprint
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service

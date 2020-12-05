@@ -50,7 +50,8 @@ TARGET_KERNEL_ARCH := arm64
 BOARD_KERNEL_SEPARATED_DTBO := true
 ifeq ($(TARGET_PREBUILT_KERNEL),)
   TARGET_KERNEL_CONFIG := lineage_zippo_defconfig
-  TARGET_KERNEL_CLANG_COMPILE := true
+  KERNEL_TOOLCHAIN := $(PWD)/prebuilts/gcc/linux-x86/aarch64/aarch64-elf/bin
+  TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-elf-
   TARGET_KERNEL_SOURCE := kernel/lenovo/sm8150
 endif
 

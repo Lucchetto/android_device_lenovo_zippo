@@ -1,5 +1,0 @@
-type hal_fod_lenovo_zippo, domain;
-hal_server_domain(hal_fod_lenovo_zippo, hal_lineage_fod)
-
-type hal_fod_lenovo_zippo_exec, exec_type, vendor_file_type, file_type;
-init_daemon_domain(hal_fod_lenovo_zippo)

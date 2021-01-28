@@ -1,6 +1,0 @@
-# HALs
-/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.lenovo_zippo                                      u:object_r:hal_light_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.lineage\.biometrics\.fingerprint\.inscreen@1\.0-service\.lenovo_zippo            u:object_r:hal_fod_lenovo_zippo_exec:s0
-
-# Touch
-/sys/devices/virtual/touch/tp_dev/gesture_on                                                                            u:object_r:sysfs_tp:s0

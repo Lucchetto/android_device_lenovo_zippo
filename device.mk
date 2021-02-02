@@ -96,8 +96,13 @@ PRODUCT_PACKAGES += \
 # Device init scripts
 PRODUCT_PACKAGES += \
     fstab.qcom \
+    init.msm.usb.configfs.rc \
+    init.qcom.factory.rc \
     init.qcom.post_boot.sh \
     init.qcom.rc \
+    init.qcom.usb.rc \
+    init.recovery.qcom.rc \
+    init.target.rc \
     ueventd.rc
 
 # Device-specific settings

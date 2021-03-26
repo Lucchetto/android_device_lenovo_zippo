@@ -12,6 +12,9 @@ DEVICE_PATH := device/lenovo/zippo
 # Assert
 TARGET_OTA_ASSERT_DEVICE := zippo
 
+# HIDL
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
+
 # Kernel
 ifeq ($(TARGET_PREBUILT_KERNEL),)
   TARGET_KERNEL_CONFIG := lineage_zippo_defconfig

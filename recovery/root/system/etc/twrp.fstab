@@ -13,8 +13,9 @@
 /system_image  emmc   /dev/block/bootdevice/by-name/system
 /vendor_image  emmc   /dev/block/bootdevice/by-name/vendor
 
-/metadata      ext4   /dev/block/bootdevice/by-name/metadata 					
-/data          ext4   /dev/block/bootdevice/by-name/userdata                     flags=fileencryption=ice:aes-256-cts;keydirectory=/metadata/vold/metadata_encryption
+/metadata      ext4   /dev/block/bootdevice/by-name/metadata
+/data          ext4   /dev/block/bootdevice/by-name/userdata                     flags=fileencryption=ice;keydirectory=/metadata/vold/metadata_encryption
+
 /firmware      vfat   /dev/block/bootdevice/by-name/modem                        flags=display="Firmware";mounttodecrypt
 /misc          emmc   /dev/block/bootdevice/by-name/misc
 /modem         emmc   /dev/block/bootdevice/by-name/modem                        flags=backup=1;display="Modem"
@@ -29,4 +30,4 @@
 
 # Removable storage
 /usb_otg       vfat   /dev/block/sdg1                    /dev/block/sdg          flags=fsflags=utf8;display="USB-OTG";storage;wipeingui;removable
-/sdcard1       auto   /dev/block/mmcblk0p1                                       flags=display="MicroSD";storage;wipeingui;removable
+/external_sd   auto   /dev/block/mmcblk0p1                                       flags=display="MicroSD";storage;wipeingui;removable

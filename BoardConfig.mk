@@ -22,5 +22,8 @@ ifeq ($(TARGET_PREBUILT_KERNEL),)
   TARGET_KERNEL_SOURCE := kernel/lenovo/sm8150
 endif
 
+# Properties
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+
 # Inherit from the proprietary version
 -include vendor/lenovo/zippo/BoardConfigVendor.mk

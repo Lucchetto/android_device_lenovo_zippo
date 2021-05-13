@@ -13,7 +13,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 PRODUCT_BRAND := Lenovo
 PRODUCT_DEVICE := zippo
 PRODUCT_MANUFACTURER := Lenovo
-PRODUCT_MODEL := Lenovo Z6 Pro
+PRODUCT_MODEL := Lenovo L78051
 PRODUCT_NAME := lineage_zippo
 
 PRODUCT_GMS_CLIENTID_BASE := android-lenovo

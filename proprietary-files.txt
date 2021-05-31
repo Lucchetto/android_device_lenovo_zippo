@@ -87,7 +87,6 @@ vendor/lib/libsns_device_mode_stub.so
 vendor/lib/libsns_fastRPC_util.so
 vendor/lib/libsns_low_lat_stream_stub.so
 vendor/lib/libswregistrationalgo.so
-vendor/lib/libswvdec.so
 vendor/lib/libvideoutils.so
 vendor/lib/libvidhance.so
 vendor/lib/libvl53l1_daemon.so
@@ -193,7 +192,6 @@ vendor/lib64/libsns_device_mode_stub.so
 vendor/lib64/libsns_fastRPC_util.so
 vendor/lib64/libsns_low_lat_stream_stub.so
 vendor/lib64/libswregistrationalgo.so
-vendor/lib64/libswvdec.so
 vendor/lib64/libsymphony-cpu.so
 vendor/lib64/libsymphonypower.so
 vendor/lib64/libvidhance.so

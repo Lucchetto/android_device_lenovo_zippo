@@ -9,7 +9,8 @@ BOARD_VENDOR := lenovo
 
 DEVICE_PATH := device/lenovo/zippo
 
-# Assert
+# Assertions
+TARGET_BOARD_INFO_FILE ?= $(DEVICE_PATH)/board-info.txt
 TARGET_OTA_ASSERT_DEVICE := zippo
 
 # HIDL

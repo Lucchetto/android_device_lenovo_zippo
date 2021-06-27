@@ -51,6 +51,8 @@ Works:
 First checkout minimal twrp with omnirom tree:
 
 ```
+mkdir -p ~/android/twrp-10
+cd ~/android/twrp-10
 repo init -u git://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b android-10
 repo sync
 ```
@@ -84,7 +86,7 @@ fastboot boot out/target/product/zippo/recovery.img
 
 ## Other Sources
 
-Kernel source: https://github.com/Lucchetto/android_kernel_lenovo_sm8150
+Kernel source: https://github.com/lenovo-sm8150/android_kernel_lenovo_sm8150/tree/twrp-10
 
 ## Thanks
 

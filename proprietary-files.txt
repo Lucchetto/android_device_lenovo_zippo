@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from L78051_SECURE_USER_12.5.262_ST_210503
+# All unpinned blobs below are extracted from L78051_SECURE_USER_12.5.332_ST_210716
 
 # Audio amplifier firmware
 vendor/firmware/mono.cnt

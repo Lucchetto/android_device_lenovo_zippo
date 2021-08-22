@@ -224,6 +224,16 @@ vendor/lib64/vendor.qti.hardware.camera.device@1.0.so
 vendor/lib/hw/sensors.hal.tof.so
 vendor/lib64/hw/sensors.hal.tof.so
 
+# Fingerprint
+vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service
+vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc
+vendor/lib/vendor.qti.hardware.fingerprint@1.0.so
+vendor/lib64/hw/fingerprint.default.so
+vendor/lib64/libgf_hal.so
+vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so
+vendor/lib64/vendor.goodix.extend.service@2.0.so
+vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
+
 # Sensors
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
 vendor/bin/sensors.qti

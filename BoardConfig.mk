@@ -26,11 +26,6 @@ ifeq ($(TARGET_PREBUILT_KERNEL),)
   TARGET_KERNEL_SOURCE := kernel/lenovo/sm8150
 endif
 
-# Fingerprint
-SOONG_CONFIG_LENOVO_MSMNILE_FOD_POS_X = 450
-SOONG_CONFIG_LENOVO_MSMNILE_FOD_POS_Y = 1916
-SOONG_CONFIG_LENOVO_MSMNILE_FOD_SIZE = 178
-
 # Power
 TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/touch/tp_dev/gesture_on"
 

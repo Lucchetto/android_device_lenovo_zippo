@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_zippo.mk
+    $(LOCAL_DIR)/aosp_zippo.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_zippo-user \
-    lineage_zippo-userdebug \
-    lineage_zippo-eng
+    aosp_zippo-user \
+    aosp_zippo-userdebug \
+    aosp_zippo-eng
